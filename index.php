@@ -81,7 +81,7 @@ $(document).ready(function () {
         errorThrown + " (" + jqXHR.status + "): ";
         errorString += (jqXHR.responseText === "") ? "" :
         jQuery.parseJSON(jqXHR.responseText).message;
-        alert(errorString);
+        // alert(errorString);
     });
 });
 </script>
