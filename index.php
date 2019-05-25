@@ -53,7 +53,7 @@ $(document).ready(function () {
     };
     // Display the image.
     var sourceImageUrl =     '<?php  echo $url;  ?>';
-    document.querySelector("#image").src = sourceImageUrl;
+    document.querySelector("#imageid").src = sourceImageUrl;
     // Make the REST API call.
     $.ajax({
       url: uriBase + "?" + $.param(params),
@@ -371,7 +371,7 @@ $(document).ready(function () {
                             </h4>
 
                           <div id="placeimage" style="width:420px; display:table-cell;">
-                    				<img id="image" width="400" />
+                    				<img id="imageid" width="400" />
                     				<br>
                     				<h3 id="detailsimages"></h3>
                     			</div>
