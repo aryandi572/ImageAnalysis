@@ -54,7 +54,7 @@ $(document).ready(function () {
       "language": "en",
     };
     // Display the image.
-    var sourceImageUrl = "https://aryablobapp.blob.core.windows.net/blockblobsbkhkxn/1.jpg";
+    var sourceImageUrl = '<?php echo $url ?>';
     document.querySelector("#imageid").src = sourceImageUrl;
     // Make the REST API call.
     $.ajax({
