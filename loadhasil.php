@@ -283,7 +283,7 @@ $(document).ready(function () {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                          <form class="form-horizontal" action="index.php" method="post" enctype="multipart/form-data">
+                          <form class="form-horizontal" action="loadhasil.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label class="file-upload btn btn-primary">
