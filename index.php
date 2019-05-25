@@ -27,7 +27,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
  ?>
 
 <html>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
     // **********************************************
@@ -52,7 +52,7 @@ $(document).ready(function () {
       "language": "en",
     };
     // Display the image.
-    var sourceImageUrl =     '<?php  echo $url;  ?>';
+    var sourceImageUrl = "https://aryablobapp.blob.core.windows.net/blockblobsbkhkxn/1.jpg";
     document.querySelector("#imageid").src = sourceImageUrl;
     // Make the REST API call.
     $.ajax({
@@ -89,7 +89,7 @@ $(document).ready(function () {
     <title>Azure Computer Vision</title>
     <!-- Favicon-->
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://www.anztechnologies.com/bootstrap-demo/css/bootstrap-fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css" />
