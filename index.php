@@ -82,7 +82,7 @@ $(document).ready(function () {
         errorThrown + " (" + jqXHR.status + "): ";
         errorString += (jqXHR.responseText === "") ? "" :
         jQuery.parseJSON(jqXHR.responseText).message;
-        alert(errorString + 'Masukan Images Dulu');
+        alert('Masukan Images Dulu');
     });
 });
 </script>
