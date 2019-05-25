@@ -13,12 +13,12 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
     $fileToUpload = strtolower($_FILES["fileToUpload"]["name"]);
     $content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
-    echo  $fileToUpload;
+    // echo  $fileToUpload;
     // echo fread($content, filesize($fileToUpload));
     $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
 
     $url = "https://aryablobapp.blob.core.windows.net/blockblobsbkhkxn/$fileToUpload";
-    echo  $url;
+    // echo  $url;
     // header("Location: index.php");
 }
 $listBlobsOptions = new ListBlobsOptions();
@@ -27,7 +27,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
  ?>
 
 <html>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
 <script type="text/javascript">
 $(document).ready(function () {
     // **********************************************
