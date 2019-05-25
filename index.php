@@ -9,6 +9,7 @@ use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=aryablobapp;AccountKey=d2sPXm7SRgmgvfGsQhBlJCAEjEypgURY+I8o1Bjr0xKJoI6GyKBot5bQ11aSVCTp2AiTq4LEQez1es64VYYnrQ==;EndpointSuffix=core.windows.net";
 $containerName = "blockblobsbkhkxn";
 $fileToUpload ="1.jpg";
+$url = "https://aryablobapp.blob.core.windows.net/blockblobsbkhkxn/$fileToUpload";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
