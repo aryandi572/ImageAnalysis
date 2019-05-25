@@ -82,7 +82,7 @@ $(document).ready(function () {
         errorThrown + " (" + jqXHR.status + "): ";
         errorString += (jqXHR.responseText === "") ? "" :
         jQuery.parseJSON(jqXHR.responseText).message;
-        alert('Masukan Images Dulu');
+        alert('Jangan Lupa Upload Gambar Dulu Untuk Mencari Keterangannya ');
     });
 });
 </script>
