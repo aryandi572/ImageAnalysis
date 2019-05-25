@@ -283,7 +283,7 @@ $(document).ready(function () {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                          <form class="form-horizontal" action="index.php" method="post" enctype="multipart/form-data">
+                          <form class="form-horizontal" action="loadhasil.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label class="file-upload btn btn-primary">
@@ -298,75 +298,6 @@ $(document).ready(function () {
                 </div>
             </div>
 
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="body">
-                          <div class="panel-group" id="accordion_1" role="tablist" aria-multiselectable="true">
-                                          <div class="panel panel-primary">
-                                              <div class="panel-heading" role="tab" id="headingOne_1">
-                                                  <h4 class="panel-title">
-                                                      <a role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="false" aria-controls="collapseOne_1" class="collapsed">
-                                                          Lihat Hasil Response Json
-                                                      </a>
-                                                  </h4>
-                                              </div>
-                                              <div id="collapseOne_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne_1" aria-expanded="false" style="height: 0px;">
-                                                  <div class="panel-body">
-                                                    <div id="placerespon" style="width:600px; display:table-cell;">
-                                                      <textarea id="jsonText" class="UIInput"
-                                                      style="width:900px;" readonly=""></textarea>
-                                                    </div>
-
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="panel panel-primary">
-                                              <div class="panel-heading" role="tab" id="headingTwo_1">
-                                                  <h4 class="panel-title">
-                                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseTwo_1" aria-expanded="false" aria-controls="collapseTwo_1">
-                                                          Lihat Data Image Pada Blob Storage
-                                                      </a>
-                                                  </h4>
-                                              </div>
-                                              <div id="collapseTwo_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_1" aria-expanded="false">
-                                                  <div class="panel-body">
-                                                    <table class='table table-hover'>
-    <thead>
-      <tr>
-        <th>Nama File</th>
-        <th>Image URL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-      do {
-          foreach ($result->getBlobs() as $blob) {
-              ?>
-          <tr>
-            <td><?php echo $blob->getName() ?></td>
-            <td><?php echo $blob->getUrl() ?></td>
-          </tr>
-          <?php
-          }
-          $listBlobsOptions->setContinuationToken($result->getContinuationToken());
-      } while ($result->getContinuationToken());
-      ?>
-    </tbody>
-  </table>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-                                      </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <?php include 'loadhasil.php'; ?>
-            <!-- #END# Example -->
         </div>
     </section>
 
