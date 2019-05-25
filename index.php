@@ -88,7 +88,7 @@ $(document).ready(function () {
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Azure Computer Vision</title>
     <!-- Favicon-->
-  <script src="jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
