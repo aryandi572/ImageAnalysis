@@ -318,8 +318,45 @@ $(document).ready(function () {
                                                   </div>
                                               </div>
                                           </div>
+                                          <div class="panel panel-primary">
+                                              <div class="panel-heading" role="tab" id="headingTwo_1">
+                                                  <h4 class="panel-title">
+                                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseTwo_1" aria-expanded="false" aria-controls="collapseTwo_1">
+                                                          Lihat Data Image Pada Blob Storage
+                                                      </a>
+                                                  </h4>
+                                              </div>
+                                              <div id="collapseTwo_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_1" aria-expanded="false">
+                                                  <div class="panel-body">
+                                                    <table class='table table-hover'>
+    <thead>
+      <tr>
+        <th>Nama File</th>
+        <th>Image URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+      do {
+          foreach ($result->getBlobs() as $blob) {
+              ?>
+          <tr>
+            <td><?php echo $blob->getName() ?></td>
+            <td><?php echo $blob->getUrl() ?></td>
+          </tr>
+          <?php
+          }
+          $listBlobsOptions->setContinuationToken($result->getContinuationToken());
+      } while ($result->getContinuationToken());
+      ?>
+    </tbody>
+  </table>
+                                                  </div>
+                                              </div>
+                                          </div>
 
                                       </div>
+
                         </div>
                     </div>
                 </div>
